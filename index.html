@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MafiaSiciliana HookSpammer</title>
+    <meta name="language" content="en-US">
+<meta name="description" content="welcome to my website" />
+<meta name="copyright" content="webhook.znkcpt">
+<meta name="author" content="webhook.znkcpt">
+<meta name="og:title" content="MafiaSiciliana HookSpammer" />
+<meta name="og:type" content="website" />
+<meta name="og:description" content="discord webhook spammer" />
+<meta name="og:site_name" content="webhook.znkcpt.xyz" />
+<meta name="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4g8CYDcTQqPu186_F9pYf8lUtIKixFdrXAAFb5MeaQYhcQy0ibC8iGpYedqZ1pS6bW7w&usqp=CAU" />
+    <link rel="icon" href="icon.png" type="image/png">
+
+</head>
+<body>
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Form validation -->
+    <link href="./assets/css/form-validation.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="./assets/css/fontawesome.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <link rel="canonical" href="https://discord-webhook.js.org">
+
+  </head>
+  <body class="bg-light">
+    <div class="preloader"></div>
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+        </div>
+        <div id="alert-placeholder"></div>
+        <div class="row g-3">
+          <div class="col-md-5 col-lg-4 order-md-last">
+            <h3 class="d-flex justify-content-between align-items-center mb-3">
+              <span id="preview-label">      Preview</span>
+            </h3>
+            <ul class="list-group mb-3" style="align-items: center;">
+              <li class="list-group-item d-flex justify-content-between lh-sm flex-column justify-content-center" style="background-color: #222; color: #ffffff!important;">
+                <img class="rounded-circle z-depth-2" id="preview-image" style="max-width: 125px;" alt="100x100" src="https://media.discordapp.net/attachments/991171524193161306/994659059179470992/-_panoramio2.jpg" data-holder-rendered="true">
+                <span align="center"><strong id="preview-username">MafiaSiciliana</strong><span class="bot-tag">BOT</span></span>
+              </li>
+              <br>
+              <li id="preview-block" class="list-group-item d-flex justify-content-between lh-sm flex-column justify-content-center" style="background-color: #222; color: #ffffff!important;">
+                <span class="text-muted" style="color: #ffffff!important"><i class="fas fa-pen"></i> Start writing your message :)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-7 col-lg-8">
+            <h3 class="mb-3">Webhook details</h3>
+            <form class="needs-validation" id="main-form" novalidate>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label for="url" class="form-label">Webhook address</label>
+                  <div class="input-group">
+                    <span class="input-group-text">https://discord.com/api/webhooks/</span>
+                    <input type="text" class="form-control" id="url" placeholder="123/abc" required>
+                    <div class="input-group-append">
+                      <button class="btn btn-dark" id="retreive" type="button">Retreive</button>
+                    </div>
+                    <div class="invalid-feedback">
+                    Please enter a valid URL for your webhook.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="username" class="form-label">Appearing username</label>
+                  <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" id="username" placeholder="MafiaSiciliana" required>
+                    <div class="invalid-feedback">
+                      You need to provide a username.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="icon-url" class="form-label">Icon URL</label>
+                  <input type="url" class="form-control" id="icon-url" placeholder="https://cdn.discordapp.com/avatars/123/icon.png" required>
+                  <div class="invalid-feedback">
+                    Please enter a valid URL for your webhook's icon.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="**Hello!** I'm a webhook." required></textarea>
+                  <div class="invalid-feedback">
+                    Please enter your message. You can't send a blank webhook.
+                  </div>
+                </div>
+              </div>
+              <hr class="my-4">
+              <button class="w-100 btn btn-primary btn-lg" id="submit-button" type="submit"><i class="fas fa-paper-plane"></i> Send the webhook</button>
+            </form>
+          </div>
+        </div>
+      </main>
+     
+    </div>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/form-validation.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/discord-markdown.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
